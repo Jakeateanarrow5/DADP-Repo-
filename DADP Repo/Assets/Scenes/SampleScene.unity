@@ -9252,7 +9252,7 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: 2092992970}
+  m_Mesh: {fileID: 923196503}
 --- !u!33 &1024336433
 MeshFilter:
   m_ObjectHideFlags: 10
@@ -28666,7 +28666,7 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: 795112034}
+  m_Mesh: {fileID: 671350383}
 --- !u!33 &1213692289
 MeshFilter:
   m_ObjectHideFlags: 10
@@ -38740,7 +38740,7 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: 520461350}
+  m_Mesh: {fileID: 1735645397}
 --- !u!33 &1406587691
 MeshFilter:
   m_ObjectHideFlags: 10
@@ -49645,6 +49645,7 @@ GameObject:
   - component: {fileID: 1440950085}
   - component: {fileID: 1440950084}
   - component: {fileID: 1440950083}
+  - component: {fileID: 1440950088}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -49678,11 +49679,35 @@ MonoBehaviour:
       m_Calls: []
   m_ActionEvents:
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1440950088}
+        m_TargetAssemblyTypeName: FPController, Assembly-CSharp
+        m_MethodName: OnMove
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 9e59ff20-dfdf-44b0-bd29-9074f2f4a90a
     m_ActionName: 'Player/Movement[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d,/Keyboard/upArrow,/Keyboard/downArrow,/Keyboard/leftArrow,/Keyboard/rightArrow]'
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1440950088}
+        m_TargetAssemblyTypeName: FPController, Assembly-CSharp
+        m_MethodName: OnLook
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: f47d20d5-6e9a-4420-8c94-60ae24a8965e
     m_ActionName: 'Player/Look[/Mouse/delta]'
   m_NeverAutoSwitchControlSchemes: 0
@@ -49781,13 +49806,30 @@ Transform:
   m_GameObject: {fileID: 1440950082}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.65, z: 0}
+  m_LocalPosition: {x: 0, y: 0.64, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 330585546}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1440950088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1440950082}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f384c355324bf24490b6c0c8e0ffc74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FPController
+  moveSpeed: 5
+  gravity: -9.81
+  cameraTransform: {fileID: 330585546}
+  lookSensitivity: 2
+  verticalLookLimit: 90
 --- !u!1 &1520425212
 GameObject:
   m_ObjectHideFlags: 0
